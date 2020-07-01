@@ -32,7 +32,7 @@ TBD.
 ## Considerações
 As seguintes suposições são consideradas para execução desse aplicativo:
 * O sistema miolo deve permanecer agnóstico a provedores de nuvem e bancos de dados, permitindo assim flexibilidade na sua integração.
-* O Padrão RESTful será respeitado.
+* O Padrão REST será respeitado.
 * O tratamento de inputs se dará por parte do sistema originário. Isso é assumido para que haja flexibilidade na tradução dos dados para a API.
 * Os ambientes Local e Dev não levam em consideração a persistência dos dados, e foram criados apenas para fornecer um ambiente de desenvolvimento fácil.
 

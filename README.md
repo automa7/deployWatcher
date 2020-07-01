@@ -1,4 +1,4 @@
-OBS: Para versão em portugues, [clique aqui](READ_ptBR.md)
+OBS: Para versão em portugues, [clique aqui](README_ptBR.md)
 # Deploy Watcher
 
 A Flask RESTful API that can be integrated by deployment pipelines in order to keep track of deployment times.
@@ -29,6 +29,6 @@ TBD.
 ## Considerations
 The following assumptions are made for this application:
 * The core system must remain agnostic to cloud providers and databases, thus allowing integration flexibility.
-* The RESTful Standard must be respected.
+* The REST Standard must be respected.
 * The inputs will be handled by the originating system. This is assumed so that there is flexibility in translating the data to the API.
 * The Local and Dev environments do not take into account data persistence, and are designed only to provide an easy environment for development.
