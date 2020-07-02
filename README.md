@@ -1,3 +1,4 @@
+OBS: Para versão em portugues, [clique aqui](README_ptBR.md)
 # Deploy Watcher
 
 Flask RESTFul API that can be integrated into your deployment pipeline to track deployment times.
@@ -51,7 +52,7 @@ TBD.
 To confirm that the execution was successful, access your browser at https://127.0.0.1:5000/transitions. A
 message indicating API: OK should appear on the screen, as in the example below:
 
-! [] (assets / img_api_ok.png)
+![](assets/img_api_ok.png)
 
 * Commands
     * GET: returns JSON with message {"API": "OK"}
