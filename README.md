@@ -44,9 +44,27 @@ commands:
     docker run -d -p 5000:5000 deploywatcher
 
 #### Prod
-TBD.
-### Lambda
-TBD.
+A simulation environment was created for production, where the application is integrated with an http host (nginx + 
+uwsgi) and a MySQL database via docker.
+
+Some considerations to be made: as it is intended only as a demonstration of the application's flexibility in any 
+environment, no layers of security or scalability were added, but they must be applied when deploying to a real 
+production environment.
+
+Prerequisites for installing this environment:
+1. Docker (linux host)
+2. Docker-compose or Docker-Stack
+3. Git, just to clone the repository. Alternatively, you can download the .zip from that repository and extract it,
+ignoring the first command in the instructions below.
+
+Having these requirements installed, open a command prompt for your operating system and run the following commands:
+NOTE: replace the `docker-compose commands with` `docker stack deploy --compose-file docker-compose.yml`
+
+    git clone https://github.com/automa7/deployWatcher.git
+    cd deployWatcher/prod_simulation
+    docker-compose build
+    docker-compose up
+
 
 #### Use
 To confirm that the execution was successful, access your browser at https://127.0.0.1:5000/transitions. A
@@ -56,10 +74,10 @@ message indicating API: OK should appear on the screen, as in the example below:
 
 * Commands
     * GET: returns JSON with message {"API": "OK"}
-    * POST: inserts an deployment status into the database. Returns message stating that the insertion was successful 
+    * POST: inserts a deployment status into the database. Returns message stating that the insertion was successful 
     and the id of the insertion. Accepts JSON body, containing parameters:
         * component: String => Contains the name of the component being registered
-        * version: Float(2) => Indicates the version of the component that is deploying.
+        * version: Decimal(2,1) => Indicates the version of the component that is deploying.
         * author: String => Indicates the person responsible for deploying the component.
         * status: String => Indicates the status of the deployment transition being logged.
         * sent_timestamp: String => Optional parameter in "yyyy-mm-dd hh: mm: ss.fff" format which is converted to 

@@ -44,9 +44,25 @@ comandos:
     docker run -d -p 5000:5000 deploywatcher
 
 #### Prod
-TBD.
-### Lambda
-TBD.
+Um ambiente de simulação foi criado para produção, aonde o aplicativo é integrado a um host http (nginx+uwsgi) e um 
+banco de dados MySQL via docker. 
+
+Algumas considerações a serem feitas: como é visado apenas uma demonstração da flexibilidade do aplicativo em ambiente 
+de produção, não foi adicionado camadas de segurança nem de escalabilidade ao deployment.
+
+Pré-requisitos para instalação desse ambiente:
+1. Docker (linux host)
+2. Docker-compose ou Docker-Stack
+3. Git, apenas para clonar o repositório. Alternativamente, você pode baixar o .zip desse repositório e extrai-lo, 
+ignorando o primeiro comando das instruções abaixo.
+
+Tendo esses requisitos instalados, abra um prompt de comando do seu sistema operacional e execute os seguintes comandos:  
+OBS: substituir os comandos `docker-compose por `docker stack deploy --compose-file docker-compose.yml`
+
+    git clone https://github.com/automa7/deployWatcher.git 
+    cd deployWatcher/prod_simulation
+    docker-compose build
+    docker-compose up
 
 #### Utilização
 Para confirmar que a execução foi bem sucedida, acesse seu navegador no endereço https://127.0.0.1:5000/transitions. Uma 

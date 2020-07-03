@@ -1,12 +1,14 @@
 FROM python:3.8-alpine3.12
 
-MAINTAINER Alex Lopes "alexlopes@tuta.io"
+ENV APP deployWatcher
+WORKDIR /$APP
 
-COPY ./requirements_docker.txt deployWatcher /deployWatcher/
-COPY .env /deployWatcher/.env
-
-WORKDIR /deployWatcher
-
+COPY ./requirements_docker.txt /$APP/requirements.txt
 RUN pip install -r requirements.txt
 
-CMD flask run
+COPY deployWatcher /$APP
+COPY .env /$APP/.env
+
+EXPOSE 5000
+
+CMD python app.py
