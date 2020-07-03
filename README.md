@@ -1,4 +1,5 @@
 OBS: Para versão em portugues, [clique aqui](README_ptBR.md)
+disclaimer: .env 
 # Deploy Watcher
 
 Flask RESTFul API that can be integrated into your deployment pipeline to track deployment times.
@@ -16,13 +17,11 @@ If these requirements are met, open your command line and perform the following 
 #### Windows cmd / Powershell
     git clone https://github.com/automa7/deployWatcher.git
     cd deployWatcher
-    rename .env_dev .env
     flask run
     
 #### Linux shell
     git clone https://github.com/automa7/deployWatcher.git
     cd deployWatcher
-    mv .env_dev .env
     flask run
 
 ### Docker
@@ -39,7 +38,6 @@ commands:
 
     git clone https://github.com/automa7/deployWatcher.git
     cd deployWatcher
-    mv .env_dev .env
     docker build. -t deploywatcher
     docker run -d -p 5000:5000 deploywatcher
 

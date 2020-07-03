@@ -16,13 +16,11 @@ comandos:
 #### Windows cmd/Powershell
     git clone https://github.com/automa7/deployWatcher.git
     cd deployWatcher
-    rename .env_dev .env
     flask run
     
 #### Linux shell
     git clone https://github.com/automa7/deployWatcher.git 
     cd deployWatcher
-    mv .env_dev .env
     flask run
 
 ### Docker
@@ -39,7 +37,6 @@ comandos:
 
     git clone https://github.com/automa7/deployWatcher.git 
     cd deployWatcher
-    mv .env_dev .env
     docker build . -t deploywatcher
     docker run -d -p 5000:5000 deploywatcher
 
