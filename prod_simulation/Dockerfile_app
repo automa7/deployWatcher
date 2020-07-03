@@ -7,7 +7,7 @@ WORKDIR $APP
 
 EXPOSE 5000
 
-COPY prod_simulation/requirements_prod.txt /$APP/requirements.txt
+COPY ./requirements_prod.txt /$APP/requirements.txt
 
 RUN pip install -r requirements.txt
 
