@@ -5,8 +5,8 @@ services:
     env_file:
       - .prod.env
     build:
-      context: ..
-      dockerfile: prod_simulation/Dockerfile_app
+      context: .
+      dockerfile: Dockerfile_app
     volumes:
       - "../deployWatcher:/app"
   nginx:
