@@ -1,5 +1,5 @@
 OBS: Para versão em portugues, [clique aqui](README_ptBR.md)
-disclaimer: .env 
+
 # Deploy Watcher
 
 Flask RESTFul API that can be integrated into your deployment pipeline to track deployment times.
