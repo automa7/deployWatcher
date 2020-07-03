@@ -5,10 +5,10 @@ services:
     env_file:
       - .prod.env
     build:
-      context: .
+      context: ..
       dockerfile: Dockerfile_app
     volumes:
-      - "../deployWatcher:/app"
+      - "./deployWatcher:/app"
   nginx:
     image: nginx-server
     build:
