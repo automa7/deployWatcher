@@ -56,7 +56,7 @@ Prerequisites for installing this environment:
 ignoring the first command in the instructions below.
 
 Having these requirements installed, open a command prompt for your operating system and run the following commands:
-NOTE: replace the `docker-compose commands with` `docker stack deploy --compose-file docker-compose.yml`
+NOTE: replace the `docker-compose` commands with `docker stack deploy --compose-file docker-compose.yml`
 
     git clone https://github.com/automa7/deployWatcher.git
     cd deployWatcher/prod_simulation

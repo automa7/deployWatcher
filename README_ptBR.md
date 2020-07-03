@@ -54,7 +54,7 @@ Pré-requisitos para instalação desse ambiente:
 ignorando o primeiro comando das instruções abaixo.
 
 Tendo esses requisitos instalados, abra um prompt de comando do seu sistema operacional e execute os seguintes comandos:  
-OBS: substituir os comandos `docker-compose por `docker stack deploy --compose-file docker-compose.yml`
+OBS: substituir os comandos `docker-compose` por `docker stack deploy --compose-file docker-compose.yml`
 
     git clone https://github.com/automa7/deployWatcher.git 
     cd deployWatcher/prod_simulation
