@@ -17,6 +17,7 @@ from flask_restful import Api
 
 def add_resources(api_var: Api):
     api_var.add_resource(rsc.Transitions, '/transitions')
+    api_var.add_resource(rsc.Health, '/health')
 
 
 def create_app(config_filename: Dict = None) -> Flask:

@@ -6,13 +6,13 @@ class TransitionModel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     component = db.Column(db.String(140))
-    version = db.Column(db.Float(precision=2))
+    version = db.Column(db.String(50))
     author = db.Column(db.String(80))
     status = db.Column(db.String(50))
     sentTimestamp = db.Column(db.DateTime)
     receivedTimestamp = db.Column(db.DateTime)
 
-    def __init__(self, component: str, version: float, author: str, status: str,
+    def __init__(self, component: str, version: str, author: str, status: str,
                  sent_timestamp: str = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')):
         self.component = component
         self.version = version
